@@ -22,3 +22,16 @@ function mostProfitableDepartment(profDept){
     }
 
   }
+  var arraySort = [];
+  for(var salesDept in deptObj){
+
+     arraySort.push([salesDept,deptObj[salesDept]]);
+
+  }
+  arraySort.sort(function(a,b){
+      return b[1] - a[1];
+    })
+
+  console.log(arraySort[0][0]);
+  return arraySort[0][0];
+}
